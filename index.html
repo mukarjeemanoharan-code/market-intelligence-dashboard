@@ -1,0 +1,955 @@
+<title>B2B SaaS Market Intelligence</title>
+<style>
+:root {
+  --bg: #FBFBFD;
+  --surface: #FFFFFF;
+  --surface-elevated: #FFFFFF;
+  --text-primary: #1D1D1F;
+  --text-secondary: #6E6E73;
+  --text-tertiary: #86868B;
+  --border: #D2D2D7;
+  --border-light: #E8E8ED;
+  --blue: #0071E3;
+  --blue-hover: #0077ED;
+  --blue-bg: #E8F0FE;
+  --green: #34C759;
+  --green-bg: #E8F8ED;
+  --orange: #FF9500;
+  --orange-bg: #FFF4E6;
+  --red: #FF3B30;
+  --red-bg: #FFEBEA;
+  --purple: #AF52DE;
+  --purple-bg: #F3E8F9;
+  --teal: #5AC8FA;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 14px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 28px rgba(0,0,0,0.12);
+  --radius: 14px;
+  --radius-sm: 10px;
+  --radius-pill: 980px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000000;
+    --surface: #1C1C1E;
+    --surface-elevated: #2C2C2E;
+    --text-primary: #F5F5F7;
+    --text-secondary: #A1A1A6;
+    --text-tertiary: #86868B;
+    --border: #38383A;
+    --border-light: #2C2C2E;
+    --blue-bg: #0C2840;
+    --green-bg: #0C2E14;
+    --orange-bg: #2E1F06;
+    --red-bg: #2E0C0A;
+    --purple-bg: #1F0C2E;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-md: 0 4px 14px rgba(0,0,0,0.4);
+    --shadow-lg: 0 8px 28px rgba(0,0,0,0.5);
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #000000;
+  --surface: #1C1C1E;
+  --surface-elevated: #2C2C2E;
+  --text-primary: #F5F5F7;
+  --text-secondary: #A1A1A6;
+  --text-tertiary: #86868B;
+  --border: #38383A;
+  --border-light: #2C2C2E;
+  --blue-bg: #0C2840;
+  --green-bg: #0C2E14;
+  --orange-bg: #2E1F06;
+  --red-bg: #2E0C0A;
+  --purple-bg: #1F0C2E;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 14px rgba(0,0,0,0.4);
+  --shadow-lg: 0 8px 28px rgba(0,0,0,0.5);
+}
+
+:root[data-theme="light"] {
+  --bg: #FBFBFD;
+  --surface: #FFFFFF;
+  --surface-elevated: #FFFFFF;
+  --text-primary: #1D1D1F;
+  --text-secondary: #6E6E73;
+  --text-tertiary: #86868B;
+  --border: #D2D2D7;
+  --border-light: #E8E8ED;
+  --blue-bg: #E8F0FE;
+  --green-bg: #E8F8ED;
+  --orange-bg: #FFF4E6;
+  --red-bg: #FFEBEA;
+  --purple-bg: #F3E8F9;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 14px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 28px rgba(0,0,0,0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.47059;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.header {
+  padding: 48px 24px 32px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.header h1 {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.header .subtitle {
+  font-size: 17px;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.search-bar {
+  max-width: 1120px;
+  margin: 0 auto 20px;
+  padding: 0 24px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 12px 20px 12px 44px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 17px;
+  font-family: inherit;
+  background: var(--surface);
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none' stroke='%2386868B' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='8' cy='8' r='5.5'/%3E%3Cline x1='12' y1='12' x2='16' y2='16'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 16px center;
+}
+
+.search-bar input:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(0,113,227,0.15);
+}
+
+.search-bar input::placeholder { color: var(--text-tertiary); }
+
+.filters {
+  max-width: 1120px;
+  margin: 0 auto 28px;
+  padding: 0 24px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.seg-control {
+  display: inline-flex;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.seg-control button {
+  padding: 7px 16px;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.seg-control button.active {
+  background: var(--blue);
+  color: #FFF;
+}
+
+.seg-control button:hover:not(.active) {
+  color: var(--text-primary);
+  background: var(--border-light);
+}
+
+.stats-row {
+  max-width: 1120px;
+  margin: 0 auto 28px;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 16px 18px;
+  text-align: center;
+}
+
+.stat-card .stat-num {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.stat-card .stat-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 2px;
+}
+
+.company-list {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.company-card {
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow 0.25s, border-color 0.25s;
+}
+
+.company-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--border);
+}
+
+.card-header {
+  padding: 20px 24px;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: start;
+  user-select: none;
+}
+
+.card-header:active { opacity: 0.85; }
+
+.card-left { min-width: 0; }
+
+.card-name {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.card-category {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-meta {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.pill-stage {
+  background: var(--blue-bg);
+  color: var(--blue);
+}
+
+.pill-urgency-high {
+  background: var(--red-bg);
+  color: var(--red);
+}
+
+.pill-urgency-medium {
+  background: var(--orange-bg);
+  color: var(--orange);
+}
+
+.pill-urgency-low {
+  background: var(--green-bg);
+  color: var(--green);
+}
+
+.pill-freq {
+  background: var(--purple-bg);
+  color: var(--purple);
+}
+
+.pill-remote {
+  background: var(--green-bg);
+  color: var(--green);
+}
+
+.card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.status-btn {
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--border);
+  background: transparent;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.status-btn:hover { border-color: var(--blue); color: var(--blue); }
+
+.status-btn[data-status="interested"] { background: var(--blue); color: #FFF; border-color: var(--blue); }
+.status-btn[data-status="applied"] { background: var(--green); color: #FFF; border-color: var(--green); }
+.status-btn[data-status="rejected"] { background: var(--red); color: #FFF; border-color: var(--red); }
+.status-btn[data-status="parked"] { background: var(--orange); color: #FFF; border-color: var(--orange); }
+
+.chevron {
+  width: 20px;
+  height: 20px;
+  color: var(--text-tertiary);
+  transition: transform 0.3s;
+  align-self: center;
+}
+
+.company-card.open .chevron { transform: rotate(180deg); }
+
+.card-detail {
+  display: none;
+  border-top: 1px solid var(--border-light);
+}
+
+.company-card.open .card-detail { display: block; }
+
+.detail-tabs {
+  display: flex;
+  gap: 0;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--border-light);
+  overflow-x: auto;
+}
+
+.detail-tabs button {
+  padding: 12px 18px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.detail-tabs button.active {
+  color: var(--blue);
+  border-bottom-color: var(--blue);
+}
+
+.detail-tabs button:hover:not(.active) {
+  color: var(--text-primary);
+}
+
+.tab-content {
+  padding: 20px 24px;
+}
+
+.tab-pane { display: none; }
+.tab-pane.active { display: block; }
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.info-item {}
+
+.info-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 3px;
+}
+
+.info-value {
+  font-size: 15px;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.info-value a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.info-value a:hover { text-decoration: underline; }
+
+.leader-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.leader-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 14px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+}
+
+.leader-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  font-size: 15px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.leader-info { flex: 1; min-width: 0; }
+
+.leader-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.leader-title {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.leader-link {
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--blue);
+  background: transparent;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 500;
+  font-family: inherit;
+  text-decoration: none;
+  transition: all 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.leader-link:hover { background: var(--blue); color: #FFF; }
+
+.leader-link.disabled {
+  border-color: var(--border);
+  color: var(--text-tertiary);
+  pointer-events: none;
+}
+
+.section-block {
+  margin-bottom: 18px;
+}
+
+.section-block:last-child { margin-bottom: 0; }
+
+.section-block h4 {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-tertiary);
+  margin-bottom: 6px;
+}
+
+.section-block p, .section-block ul {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.section-block ul {
+  padding-left: 18px;
+}
+
+.section-block li {
+  margin-bottom: 4px;
+}
+
+.outreach-box {
+  background: var(--blue-bg);
+  border-radius: var(--radius-sm);
+  padding: 16px 18px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-primary);
+  border-left: 3px solid var(--blue);
+}
+
+.gap-item {
+  padding: 8px 12px;
+  background: var(--orange-bg);
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.gap-item:last-child { margin-bottom: 0; }
+
+.apply-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 24px;
+  border-radius: var(--radius-pill);
+  background: var(--blue);
+  color: #FFF;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s;
+  margin-top: 14px;
+}
+
+.apply-btn:hover { background: var(--blue-hover); }
+
+.empty-state {
+  text-align: center;
+  padding: 60px 24px;
+  color: var(--text-tertiary);
+  font-size: 17px;
+}
+
+.status-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 4px;
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lg);
+  z-index: 100;
+  overflow: hidden;
+  min-width: 140px;
+  display: none;
+}
+
+.status-menu.show { display: block; }
+
+.status-menu button {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--text-primary);
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.status-menu button:hover { background: var(--border-light); }
+
+.status-wrap { position: relative; }
+
+.competitor-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.comp-tag {
+  padding: 3px 10px;
+  background: var(--bg);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.roles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.role-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  gap: 12px;
+}
+
+.role-card span { font-size: 14px; font-weight: 500; }
+
+.role-link {
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  background: var(--blue);
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.role-link:hover { background: var(--blue-hover); }
+
+@media (max-width: 700px) {
+  .header { padding: 32px 16px 24px; }
+  .header h1 { font-size: 28px; }
+  .search-bar, .filters, .stats-row, .company-list { padding-left: 16px; padding-right: 16px; }
+  .card-header { padding: 16px; grid-template-columns: 1fr auto; }
+  .card-name { font-size: 17px; }
+  .card-right { flex-direction: row; align-items: center; }
+  .info-grid { grid-template-columns: 1fr; }
+  .tab-content { padding: 16px; }
+  .detail-tabs { padding: 0 16px; }
+  .stats-row { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+
+<div class="header">
+  <h1>Market Intelligence</h1>
+  <p class="subtitle">20 B2B SaaS companies hiring SDR/BDR in India &mdash; Updated Aug 5, 2026</p>
+</div>
+
+<div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Search companies, roles, categories...">
+</div>
+
+<div class="filters" id="filters">
+  <div class="seg-control" data-filter="stage">
+    <button class="active" data-val="all">All Stages</button>
+    <button data-val="Startup">Startup</button>
+    <button data-val="High Growth Startup">Growth</button>
+    <button data-val="Scale-up">Scale-up</button>
+    <button data-val="Enterprise">Enterprise</button>
+  </div>
+  <div class="seg-control" data-filter="urgency">
+    <button class="active" data-val="all">All Urgency</button>
+    <button data-val="High">High</button>
+    <button data-val="Medium">Medium</button>
+    <button data-val="Low">Low</button>
+  </div>
+  <div class="seg-control" data-filter="status">
+    <button class="active" data-val="all">All Status</button>
+    <button data-val="new">New</button>
+    <button data-val="interested">Interested</button>
+    <button data-val="applied">Applied</button>
+    <button data-val="rejected">Rejected</button>
+    <button data-val="parked">Parked</button>
+  </div>
+  <div class="seg-control" data-filter="freq">
+    <button class="active" data-val="all">All</button>
+    <button data-val="freq">Frequent Hirer</button>
+  </div>
+</div>
+
+<div class="stats-row" id="statsRow"></div>
+
+<div class="company-list" id="companyList"></div>
+
+<script>
+const COMPANIES = [
+  {id:1,name:"Azul",cat:"Developer Tools / JVM",stage:"Well Established Company",emp:"201-500",hq:"Sunnyvale, CA",founded:"2002",website:"https://www.azul.com",linkedin:"https://www.linkedin.com/company/azul-systems",about:"The only company exclusively focused on Java and the JVM. Makes Java secure, efficient and affordable.",roles:["Business Development Representative"],jobUrls:["https://www.linkedin.com/jobs/view/4431690942/"],loc:["Mumbai / Bangalore, India"],mode:["Remote (India)"],urgency:"Medium",product:"Provides certified, supported OpenJDK builds, high-performance JVM alternatives, and cloud intelligence services. Offers Azul Platform Core (OpenJDK-compatible) and Azul Platform Prime (high-perf JVM).",icp:"Large enterprises running Java at scale on cloud; companies migrating from Oracle Java (cost reduction).",funding:"$82.2M+ raised; ~$340M secondary (2020, Vitruvian/Lead Edge). Growth/Pre-IPO.",revenue:"$83.8M ARR",competitors:["Oracle Java","Red Hat OpenJDK","Amazon Corretto","JetBrains","GraalVM"],news:"July 2026: Moved NYSE listing from NYSE American to NYSE. Monthly critical security patch cadence.",gtmMotion:"Product-Led + Enterprise Sales. India BDR focused on Mumbai/Bangalore enterprise accounts with large Java infrastructure.",salesMotion:"Outbound + inbound (technical community). Long sales cycles (6-18 months). Technical POC-driven. Sells to CTO/VP Engineering.",gaps:["India BDR is new hire — no established India outbound playbook yet","Brand awareness in India enterprise Java market may be low","Remote BDR without local management suggests early India GTM experiment"],outreach:"'We help enterprise Java shops in India cut Oracle licensing costs by 60%+ — our India BDR is just starting to build pipeline here. Want to compare notes on how top companies evaluate OpenJDK alternatives?' Highly technical buyer — lead with cost and performance data.",leaders:[{name:"Scott Sellers",title:"President & CEO, Co-Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/ssellers"},{name:"Gil Tene",title:"CTO, Co-Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/giltene"},{name:"Vikram Rana",title:"VP Sales, North America",cat:"vp_sales",li:"https://www.linkedin.com/in/vikram-rana-42445b"},{name:"Peter Maloney",title:"CFO & COO",cat:"other",li:"https://www.linkedin.com/in/pemaloney"}]},
+  {id:2,name:"Loop Subscriptions",cat:"DTC Commerce / Subscription Mgmt",stage:"High Growth Startup",emp:"51-200",hq:"Delaware",founded:"2021",website:"https://www.loopwork.co",linkedin:"https://www.linkedin.com/company/loop-subscriptions",about:"Next-gen Shopify subscription management platform for DTC brands. $4B+ in subscription revenue across 2,400+ brands.",roles:["Enterprise SDR (US, SaaS)"],jobUrls:["https://www.linkedin.com/jobs/view/4448940880/"],loc:["Gurugram, India"],mode:["Office"],urgency:"High",product:"Enables auto-ship, gift, trial, bundle subscriptions; passwordless subscriber portal; AI-powered cancellation deflection and retention.",icp:"Shopify DTC brands with subscription products (health, beauty, food, pet). $1M-$50M GMV stores.",funding:"Undisclosed (3 investors). Seed/Early.",revenue:"$13.7M ARR",competitors:["Recharge","Stay AI","OrderGroove","Skio","Smartrr"],news:"April 2026: Recharge acquired Skio for $105M. Loop maintains 4.9-star rating, 650+ reviews on Shopify App Store.",gtmMotion:"Product-Led Growth (Shopify App Store) + Enterprise Sales Overlay. Enterprise SDR from India for US DTC brands.",salesMotion:"Outbound + migration campaigns targeting Recharge customers. Demo-led with subscription ROI proof points.",gaps:["Gap between self-serve and enterprise motion","Competitive moat vs Recharge weakened post Recharge-Skio merger","India SDR selling into US DTC market — timezone challenges"],outreach:"'Loop is doubling down on enterprise DTC — you’re one of the first SDRs building US enterprise pipeline from India. The Recharge-Skio merger created perfect migration timing.' Arm with churn reduction data.",leaders:[{name:"Piyush Jain",title:"Founder & CEO",cat:"founder_ceo",li:"https://www.linkedin.com/in/piyush-jain"},{name:"Vivek Agarwal",title:"Co-Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/vagarwal214"}]},
+  {id:3,name:"Leena AI",cat:"Agentic AI / Enterprise AI",stage:"Scale-up",emp:"201-500",hq:"San Francisco, CA",founded:"2018",website:"https://leena.ai/",linkedin:"https://www.linkedin.com/company/leena-ai",about:"Agentic AI platform delivering AI Colleagues for enterprise back-office (HR, IT, Finance).",roles:["BDR - Europe","BDR - NAMER"],jobUrls:["https://www.linkedin.com/jobs/view/4447366250/","https://www.linkedin.com/jobs/view/4447360408/"],loc:["Bengaluru, India"],mode:["Office"],urgency:"High",product:"Autonomous agents handle employee onboarding, service delivery, knowledge management, ITSM, and generative AI workflows. Launched AI Colleague Studio (Oct 2025).",icp:"Fortune 500, 10,000+ employees with complex HR/IT service delivery needs. Global enterprises with ITSM modernization.",funding:"$40.1M across 4 rounds. Series B (Sept 2021). Bessemer, Greycroft.",revenue:"Not publicly disclosed",competitors:["Kore.ai","Atomicwork","Ema","Moveworks","ServiceNow HRSD","Microsoft Copilot"],news:"October 2025: Launched AI Colleague Studio. Atomicwork raised funding Sept 2025.",gtmMotion:"Enterprise Sales (Consultative). Selling to Fortune 500 CHROs, CIOs. Two BDR roles (Europe, NAMER) signal geographic expansion.",salesMotion:"Outbound BDR-led + inbound. Complex multi-stakeholder deals (CHRO + CIO + IT). 6-18 month cycles. Proof of value via pilot.",gaps:["Series B funded in 2021 (5 years ago) — burn rate pressure likely","Window to capture enterprise before Microsoft Copilot dominates","Simultaneous EU + NAMER hires from India suggests resource optimization"],outreach:"'Leena AI is hiring BDRs for both Europe and NAMER simultaneously — coordinated GTM push. Target: CHRO/CIO at 5,000+ employee enterprises. AI Colleague framing is differentiated from Copilot because it’s back-office specific.'",leaders:[{name:"Adit Jain",title:"Co-Founder & CEO",cat:"founder_ceo",li:"https://www.linkedin.com/in/adit-jain-leena-ai"},{name:"Anand Prajapati",title:"Co-Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/anand-prajapati"},{name:"Mayank Goyal",title:"Co-Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/mayankzuppit"},{name:"Shravan Shet",title:"Sr. Manager, Sales Development",cat:"head_sales",li:"https://www.linkedin.com/in/shravanshet"}]},
+  {id:4,name:"TestGrid.io",cat:"DevTools / QA Test Automation",stage:"Startup",emp:"51-200",hq:"Atlanta, GA",founded:"2015",website:"https://www.testgrid.io",linkedin:"https://www.linkedin.com/company/testgrid-io",about:"End-to-end cloud and on-prem testing solution. Device cloud, API automation, IoT testing, AI test generation.",roles:["Sales Development Representative"],jobUrls:["https://www.linkedin.com/jobs/view/4449435129/"],loc:["Hyderabad, India"],mode:["Unknown"],urgency:"Medium",product:"Mobile app testing (iOS/Android), API automation, IoT testing, device cloud, test case management. AI-powered CoTester for test generation.",icp:"QA and engineering teams at software product companies; mobile app developers; fintech and healthcare with compliance testing needs.",funding:"Undisclosed Seed (Aug 2023).",revenue:"Not publicly disclosed",competitors:["BrowserStack","Tricentis","SmartBear","Sauce Labs","LambdaTest"],news:"2025: Won Global Recognition Award. Launched CoTester (AI test gen). Ranked 6th among 58 competitors.",gtmMotion:"Inside Sales + freemium/trial conversion. SDR supports mid-market and enterprise expansion.",salesMotion:"Inbound-heavy (G2, comparison pages) + outbound SDR. Demo-driven. Technical buyer (QA Engineer, SDET, QA Manager).",gaps:["Low brand awareness vs BrowserStack","Hyderabad SDR pool smaller than Bengaluru/Mumbai","Unclear enterprise AE capacity to work qualified leads"],outreach:"'TestGrid won 2025 Global Recognition Award and is building first outbound motion. ICP: QA leads and engineering managers. Lead with end-to-end platform vs BrowserStack’s device-only play.'",leaders:[{name:"Harry Rao",title:"CEO & Co-Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/harryceotestgrid"},{name:"Yassine Sbiti",title:"CIO & Co-Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/yassine-sbiti-866336"},{name:"Sachin R",title:"Co-Founder",cat:"founder_ceo",li:null}]},
+  {id:5,name:"Skydo",cat:"FinTech / Cross-border B2B Payments",stage:"High Growth Startup",emp:"51-200",hq:"Bengaluru, India",founded:"2022",website:"https://skydo.com",linkedin:"https://www.linkedin.com/company/skydo-official",about:"Cross-border B2B payments for Indian exporters. Zero forex markup, 24-hour settlement, 32+ currencies, 150+ countries.",roles:["Business Development Representative"],jobUrls:["https://www.linkedin.com/jobs/view/4448931774/"],loc:["Bengaluru, India"],mode:["Office"],urgency:"High",product:"Virtual foreign accounts in 10+ countries, live mid-market FX rate, flat transaction fee, 24-hour settlement to Indian bank accounts. No compliance burden.",icp:"Indian exporters (SaaS, agencies, freelancers, manufacturers) receiving international B2B payments. $100K+ monthly international receipts.",funding:"$19.7M across 3 rounds. $10M Series A (Dec 2025). Susquehanna, Elevation Capital.",revenue:"$850M+ annualized payment volume; 40,000+ businesses",competitors:["PayPal","Wise Business","Payoneer","Razorpay Opfin"],news:"Sept 2025: Partnership with Veem for USD collections. Dec 2025: Closed $10M Series A.",gtmMotion:"Bottom-up PLG + BDR Outbound. Self-serve for SMBs, BDR for mid-market ($100K+ monthly receipts).",salesMotion:"BDR-led outbound targeting finance heads, founders, CFOs of Indian SMBs. Selling against PayPal/banks on cost savings.",gaps:["Conversion from SMB to mid-market requires different motion","Cross-border payments is crowded","Veem partnership not yet scaled"],outreach:"'Skydo just closed $10M Series A to accelerate BDR motion. ICP: Indian exporters doing $100K+ international business. Zero forex markup + virtual accounts + 24-hour settlement. Lead with cost savings calculator.'",leaders:[{name:"Srivatsan Sridhar",title:"CEO & Co-Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/srivats80"},{name:"Movin Jain",title:"Co-Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/movinjain"},{name:"Atul Mohan",title:"Head of Sales",cat:"head_sales",li:null},{name:"Abhilove Sharda",title:"Head of Finance",cat:"other",li:"https://www.linkedin.com/in/abhilove-sharda"}]},
+  {id:6,name:"Cube",cat:"AI Marketing / Demand Generation",stage:"Startup",emp:"51-200",hq:"Palo Alto, CA",founded:"2023",website:"https://www.cubehq.ai/",linkedin:"https://www.linkedin.com/company/cubehqai",about:"AI-powered digital marketing for multi-location businesses. SEO, paid ads, social, email, reviews from one dashboard.",roles:["Sales Development Representative"],jobUrls:["https://www.linkedin.com/jobs/view/4446678607/"],loc:["Bengaluru, India"],mode:["Office"],urgency:"Medium",product:"Automates SEO, paid ads (Google/Meta), social media, email marketing, and online review management. AI agents run campaigns 24/7.",icp:"Multi-location businesses (restaurants, retail chains, healthcare clinics). US and India markets.",funding:"$2.2M across 2 rounds. Seed (2020). Surge Ventures.",revenue:"Not publicly disclosed",competitors:["Vendasta","Broadly","SOCi","Yext","Birdeye"],news:"2025: Expanded Bengaluru office; scaling SDR team for US market outreach.",gtmMotion:"Outbound Sales + Marketplaces. SDR-led outbound from Bengaluru targeting US multi-location businesses.",salesMotion:"Outbound cold outreach to US multi-location businesses. Demo-driven. Monthly recurring revenue model.",gaps:["Digital marketing is extremely crowded","Multi-location outreach from India requires US timezone coverage","SDR role may be among first hires — no playbook"],outreach:"'Cube is AI-first digital marketing for multi-location businesses, built by Stanford/IIT founders. ICP: US multi-location owners paying agencies too much. Help establish the outbound playbook early.'",leaders:[{name:"Suhail Abidi",title:"Co-Founder & CEO",cat:"founder_ceo",li:"https://www.linkedin.com/in/suhailabidi"},{name:"Ashish Ranjan",title:"Co-Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/ashishiitkgp"},{name:"Abhinav Gupta",title:"Co-Founder",cat:"founder_ceo",li:null}]},
+  {id:7,name:"KYC Hub",cat:"RegTech / KYC-AML Compliance",stage:"High Growth Startup",emp:"51-200",hq:"London, UK",founded:"2019",website:"https://www.kychub.com/",linkedin:"https://www.linkedin.com/company/kychub",about:"Configurable, modular KYC/AML compliance platform. RPA-powered workflow engine for onboarding and due diligence.",roles:["Sales Development Representative"],jobUrls:["https://www.linkedin.com/jobs/view/4447346880/"],loc:["India (Remote)"],mode:["Remote (India)"],urgency:"High",product:"AI-enabled verifications, proprietary knowledge graph, sanctions screening, PEP checks, IDV, KYB, address verification.",icp:"Financial institutions, fintechs, crypto/Web3 companies, payment processors needing automated KYC/AML compliance.",funding:"Undisclosed (est. <$10M). Seed/Series A.",revenue:"$1-10M range",competitors:["AiPrise","Onfido","Jumio","Sumsub","ComplyAdvantage"],news:"Named in Top 10 KYC Solutions in RegTech for 2026 (Fintech Global). Won 'Best PEP and Sanctions Solution.'",gtmMotion:"Enterprise Sales (Outbound + Compliance Events). Remote India SDR targeting UK/EU/APAC compliance officers.",salesMotion:"Outbound SDR + compliance conferences. Technical, complex sale (60-180 day cycles). CCO, Head of AML, CRO buyers.",gaps:["India SDR covering multiple markets must navigate regulatory differences","Buyer (CCO) is highly risk-averse","Competing vs Jumio/Onfido requires clear differentiation"],outreach:"'KYC Hub is a RegTech100 award winner expanding APAC coverage with remote India SDR. Lead with configurable + modular story vs monolithic KYC platforms. Case studies from UK awards are credibility anchor.'",leaders:[{name:"Farnoush Mirmoeini",title:"CEO & Co-Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/farnoush"},{name:"Jay Rao",title:"Co-Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/jayrao1"}]},
+  {id:8,name:"apna",cat:"HR Tech / Early Talent Hiring",stage:"Scale-up",emp:"1001-5000",hq:"Bengaluru, India",founded:"2019",website:"https://apna.co",linkedin:"https://www.linkedin.com/company/apnahq",about:"India's largest early talent hiring and jobs platform. AI-powered marketplace. Unicorn ($1.1B valuation).",roles:["Lead Sales Development Representative"],jobUrls:["https://www.linkedin.com/jobs/view/4448958169/"],loc:["Bengaluru, India"],mode:["Office"],urgency:"High",product:"AI-powered marketplace connecting blue-collar, gray-collar, entry-level job seekers to employers. Automated sourcing, AI matching, skilling.",icp:"Indian companies hiring at scale for entry-level, frontline, blue-collar roles. Manufacturing, retail, BFSI, logistics.",funding:"$194M. Series C. Tiger Global, Peak XV, Insight Partners. Unicorn ($1.1B).",revenue:"Not disclosed (valuation $1.1B; 745 employees)",competitors:["LinkedIn India","foundit (Naukri)","WorkIndia","Vahan","Glassdoor"],news:"2025: Appointed Kartik Narayan as CEO of Jobs Marketplace. Headcount at 745, down 6% YoY.",gtmMotion:"Inside Sales + Platform Self-Serve. B2B SDR sells enterprise job posting packages and employer branding.",salesMotion:"Lead SDR managing outbound to HR leaders and TA heads at large Indian enterprises. Multi-product pitch.",gaps:["Brand strong for blue-collar but enterprise HR may perceive as 'mass market'","Unicorn with declining headcount may signal restructuring","B2B monetization complex when supply side is free"],outreach:"'apna is India's largest early talent platform, a unicorn hiring Lead SDR to scale enterprise sales. ICP: TA Head / HR Director at companies with 100+ entry-level hires/month. Senior role — you'll build the SDR motion.'",leaders:[{name:"Nirmit Parikh",title:"Founder & Group CEO",cat:"founder_ceo",li:"https://www.linkedin.com/in/nirmit-parikh"},{name:"Kartik Narayan",title:"CEO - Jobs Marketplace",cat:"head_sales",li:"https://www.linkedin.com/in/kartik"}]},
+  {id:9,name:"Salesforce",cat:"CRM / Enterprise Cloud",stage:"Enterprise",emp:"10001+",hq:"San Francisco, CA",founded:null,website:"http://www.salesforce.com",linkedin:"https://www.linkedin.com/company/salesforce",about:"World's #1 AI CRM. Customer 360, Sales Cloud, Service Cloud, Agentforce. 200,000+ customers. NYSE: CRM.",roles:["Sales Development Representative"],jobUrls:["https://www.linkedin.com/jobs/view/4448867769/"],loc:["Bengaluru, India"],mode:["Office"],urgency:"Medium",product:"Customer 360: Sales Cloud, Service Cloud, Marketing Cloud, Commerce Cloud, Slack, MuleSoft, Tableau, Agentforce.",icp:"Enterprises and mid-market globally. India: tech, BFSI, manufacturing, telecom.",funding:"Public (NYSE: CRM). >$200B market cap.",revenue:"$34B+ ARR (FY2025)",competitors:["HubSpot","Microsoft Dynamics 365","SAP CRM","Zendesk","Freshworks"],news:"2026: India MD for Sales appointed (Mankiran Chowhan). Agentforce AI platform driving enterprise AI adoption.",gtmMotion:"Full-funnel Enterprise Sales. Global machine with Trailhead, events, SDR/BDR, AE, SE, CSM.",salesMotion:"Structured SDR-AE model with territories. India SDR targets enterprise accounts. Agentforce is current narrative.",gaps:["Pipeline targets can be aggressive in India","SDRs must retool messaging from CRM to AI agents","Microsoft Dynamics + Copilot strongest competition in India"],outreach:"'Salesforce India is hiring SDRs as Agentforce changes the enterprise AI conversation. ICP: VP Sales, CIO, Digital Transformation Lead. The SDR pitch is now AI agents + CRM.'",leaders:[{name:"Marc Benioff",title:"CEO & Co-Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/marcbenioff"},{name:"Arundhati Bhattacharya",title:"President & CEO, South Asia",cat:"founder_ceo",li:"https://www.linkedin.com/in/arundhati-bhattacharya-salesforce"},{name:"Mankiran Chowhan",title:"MD, Sales & Distribution, India",cat:"vp_sales",li:"https://www.linkedin.com/in/mankiran-chowhan-877414"}]},
+  {id:10,name:"Keka HR",cat:"HR Tech / HRMS / Payroll",stage:"Scale-up",emp:"501-1000",hq:"Seattle, WA",founded:"2015",website:"https://www.keka.com",linkedin:"https://www.linkedin.com/company/keka-hr",about:"Modern HRMS and payroll for Indian businesses. India's fastest-growing HRMS. 10,000+ customers.",roles:["SDR","SDR (US Market)"],jobUrls:["https://www.linkedin.com/jobs/view/4448871188/","https://www.linkedin.com/jobs/view/4448858493/"],loc:["Bengaluru, India"],mode:["Office"],urgency:"High",product:"Full HRMS: payroll, attendance, leaves, performance management, recruitment (ATS), expense management, employee engagement.",icp:"Indian SMBs/mid-market (100-2000 employees) replacing legacy HR tools. IT companies, services firms, manufacturing, retail.",funding:"$59.2M across 3 rounds. $57M Series A (WestBridge Capital).",revenue:"$52.5M ARR (2025)",competitors:["Darwinbox","greytHR","Zoho People","PeopleStrong","Workday"],news:"2025: VP Sales Dheeraj Kumar Pandey. Expanding US market from Bengaluru. 10,000+ businesses.",gtmMotion:"Product-Led Growth + SDR-led Outbound. Freemium/trial for SMBs; outbound SDR for mid-market and US market.",salesMotion:"High-velocity inside sales + structured outbound. India SDR + US Market SDR simultaneously. Dual-market strategy.",gaps:["US market entry from Bengaluru creates timezone gap","Keka is unknown in US vs well-known in India","Two different markets need bifurcated training"],outreach:"'Keka HR is India's fastest-growing HRMS ($52.5M ARR) scaling US market from Bengaluru. US pitch: affordable Workday alternative with strong UX.' Align with VP Sales Dheeraj Pandey.",leaders:[{name:"Vijay Yalamanchili",title:"Founder & CEO",cat:"founder_ceo",li:"https://www.linkedin.com/in/yalamanchili"},{name:"Dheeraj Kumar Pandey",title:"VP Sales",cat:"vp_sales",li:"https://www.linkedin.com/in/dheerajkpandey"},{name:"Chad Nagwann Chitresh",title:"Head of Sales - Europe & GCC",cat:"head_sales",li:null}]},
+  {id:11,name:"Avalara",cat:"Tax Compliance / FinTech / RegTech",stage:"Enterprise",emp:"1001-5000",hq:"Pune, India",founded:null,website:"https://www.avalara.com",linkedin:"https://www.linkedin.com/company/avalara-apac",about:"Agentic AI platform for global tax and compliance. 54B+ transactions/year. 200,000+ customers. Acquired for ~$8.4B.",roles:["Sales Development Representative"],jobUrls:["https://www.linkedin.com/jobs/view/4448852602/"],loc:["Pune, India"],mode:["Unknown"],urgency:"Medium",product:"Sales tax automation, return filings, exemption certificates, e-invoicing, cross-border compliance. 1,200+ ERP integrations.",icp:"Mid-market to enterprise ecommerce, SaaS, retail, manufacturing with complex multi-jurisdiction tax. India: GST automation.",funding:"Acquired by Thomas H. Lee Partners (2022, ~$8.4B). Previously NASDAQ: AVLR.",revenue:"$800M+ (pre-acquisition)",competitors:["Vertex","TaxJar (Stripe)","Thomson Reuters","SAP Indirect Tax","Sovos"],news:"July 2025: Named new CMO and CIO. 2026: APAC India office expanding. Positioning as 'agentic AI platform.'",gtmMotion:"Enterprise Sales + Partner Channel. Direct SDR → AE + heavy partner/reseller channel (1,200+ connectors).",salesMotion:"Structured enterprise SDR → AE. SDR in Pune targeting India enterprise (GST, e-invoicing). Long cycles (90-180 days). CFO/Tax Director buyer.",gaps:["Went private in 2022 — reduced public profile","India GST mandate creates crowded competitive moment","Pune-based SDR pool smaller for SaaS sales"],outreach:"'Avalara is global leader in tax automation ($800M+, 200K customers, acquired for $8.4B). ICP: CFO and Tax Directors with multi-state GST complexity. Regulatory pressure = urgency = shorter cycles.'",leaders:[{name:"Scott McFarlane",title:"Co-Founder & CEO",cat:"founder_ceo",li:"https://www.linkedin.com/in/mcfarlanescott"},{name:"Sean Flynn",title:"SVP Global Sales",cat:"vp_sales",li:"https://www.linkedin.com/in/seanflynn94"},{name:"Kimberly Deobald",title:"Chief Revenue Officer",cat:"vp_sales",li:"https://www.linkedin.com/in/kimberlydeobald"}]},
+  {id:12,name:"Fibr AI",cat:"AI Marketing / Website CRO",stage:"Startup",emp:"11-50",hq:"San Francisco, CA",founded:"2023",website:"https://www.fibr.ai",linkedin:"https://www.linkedin.com/company/fibrai",about:"Agentic website optimization platform. Three AI agents transform websites into revenue-driving adaptive experiences.",roles:["Sales Development Representative"],jobUrls:["https://www.linkedin.com/jobs/view/4448518342/"],loc:["Bengaluru, India"],mode:["Office"],urgency:"High",product:"Three AI agents — LIV (personalization), MAX (A/B testing), AYA (monitoring). Integrates GA4, GTM, Salesforce, Adobe. SOC 2 + ISO 27001.",icp:"Enterprise marketing teams at Fortune 50 banks, fintech, telecom, healthcare. CMOs with high website traffic.",funding:"$9.5M across 3 rounds. $1.8M seed (Accel) for CRO Agents launch.",revenue:"Not publicly disclosed",competitors:["Optimizely","VWO","Adobe Target","Dynamic Yield","Unbounce"],news:"2025: Launched AI-Agents for CRO. Raised $1.8M from Accel. Trusted by Fortune 50 banks.",gtmMotion:"Outbound Enterprise Sales. SDR-led targeting enterprise marketing teams. India SDR selling into Fortune 500 US/EU.",salesMotion:"Outbound SDR → marketing/growth leader AE. Multi-stakeholder (CMO, VP Marketing, CDO). 60-180 day cycles.",gaps:["Seed stage selling to Fortune 50 — credibility gap","Enterprise marketing buyers inundated with AI CRO tools","SOC 2/ISO help but procurement cycles remain long"],outreach:"'Fibr AI is Accel-backed, trusted by Fortune 50 banks for AI website personalization — 1:1 pages, automated A/B testing, 24/7 monitoring, no dev required. SOC2/HIPAA is your security card with regulated industries.'",leaders:[{name:"Ankur Goyal",title:"CEO & Co-Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/ankurgoyal22"},{name:"Pritam Roy",title:"Co-Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/pritamroy1"}]},
+  {id:13,name:"QCraft AI",cat:"AI / Autonomous Driving",stage:"Startup",emp:"501-1000",hq:"China",founded:"2019",website:"https://www.qcraft.ai/en",linkedin:"https://www.linkedin.com/company/qcraft",about:"Physical AI and autonomous driving. AI algorithms for L2++ ADAS and L4. 1M+ mass production units across 10 OEM partners.",roles:["Senior Business Development Representative"],jobUrls:["https://www.linkedin.com/jobs/view/4446658513/"],loc:["Bengaluru, India"],mode:["Office"],urgency:"Medium",product:"NOA (Navigate on Autopilot), 500+ TOPS autonomous driving solutions, world model-based physical AI for vehicles.",icp:"Automotive OEMs and Tier-1 suppliers needing autonomous driving AI. Primary: Chinese auto OEMs with global expansion.",funding:"$100M Series D (March 2026). Total ~$400M estimated.",revenue:"Not publicly disclosed",competitors:["Mobileye","Waymo","Pony.ai","Cruise","Horizon Robotics","Momenta"],news:"Jan 2026: Next-gen 500+ TOPS solution, NOA scaled to 1M+ vehicles. March 2026: $100M Series D. April 2026: CEO at Munich on Physical AI.",gtmMotion:"B2B Enterprise Sales (Automotive). Senior BDR targeting Indian auto OEMs and Tier-1 suppliers post-$100M Series D.",salesMotion:"Complex enterprise B2B. VP Autonomous Driving, CTO, Head of ADAS buyers. 12-36 month cycles. Pilot programs.",gaps:["China-founded company selling to India — geopolitically sensitive","Automotive cycles (12-36 months) make BDR ROI very delayed","India autonomous driving market earlier stage than China/US"],outreach:"'QCraft raised $100M Series D (March 2026), building India sales. 1M+ vehicles already running their technology. India BDR targets automotive OEM tech teams and Tier-1 leads. Long-cycle, relationship-driven enterprise selling.'",leaders:[{name:"Dr. James Yu (Yu Qian)",title:"CEO & Co-Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/qian-yu-a644b94"}]},
+  {id:14,name:"Trovex.ai",cat:"Sales Enablement / AI Training",stage:"Startup",emp:"11-50",hq:"Bangalore, India",founded:"2023",website:"https://trovex.ai",linkedin:"https://www.linkedin.com/company/trovexai",about:"AI-powered sales and support enablement. Immersive roleplay simulations, post-call analytics, AI coaching, real-time agent assist.",roles:["SDR - Enterprise Sales"],jobUrls:["https://www.linkedin.com/jobs/view/4446285345/"],loc:["Mumbai, India"],mode:["Office"],urgency:"Medium",product:"Immersive roleplay simulations for sales teams, post-call analytics, AI coaching, performance dashboards, real-time agent assist.",icp:"Enterprise sales teams, customer-facing teams (sales, support, collections). BFSI, SaaS, B2B with 50+ reps.",funding:"Bootstrapped.",revenue:"Not publicly disclosed",competitors:["Second Nature","Demodesk","Brainshark","Mindtickle","Seismic"],news:"2025: Listed on Microsoft AppSource. Press on AI sales training for India enterprise (CXOToday).",gtmMotion:"Direct Enterprise Sales. SDR-led outbound from Mumbai targeting enterprise B2B sales teams.",salesMotion:"Outbound SDR targeting Head of Sales, VP Sales, CRO at enterprises with 50+ reps. Demo-driven with AI roleplay hook.",gaps:["Bootstrapped — buyers may question viability","Competing vs well-funded Second Nature, Mindtickle, Seismic","Mumbai SDR focused on BFSI needs vertical-specific training"],outreach:"'Trovex.ai is the only AI sales training platform built for Indian enterprises — roleplay simulations for bank branch sales, insurance agents, B2B SaaS reps. Bootstrapped and profitable. IISc AI research + real-time coaching.'",leaders:[{name:"Amaresh Ojha",title:"Co-Founder & CEO",cat:"founder_ceo",li:"https://www.linkedin.com/in/amaresh-ojha"},{name:"Srinivas Dhruv Shindhe",title:"Co-Founder (AI Research)",cat:"founder_ceo",li:"https://www.linkedin.com/in/dhruv-shindhe-4b90b11a5"},{name:"Abhinav Sharma",title:"Lead - Business Development",cat:"head_sales",li:null}]},
+  {id:15,name:"Tuskr",cat:"DevTools / QA Test Management",stage:"Startup",emp:"51-200",hq:"Pune, India",founded:null,website:"http://www.tuskr.app",linkedin:"https://www.linkedin.com/company/tuskr",about:"Cloud-based test case management by Celoxis Technologies. Power-packed with everything you want.",roles:["Sales Development Representative"],jobUrls:["https://www.linkedin.com/jobs/view/4446291718/"],loc:["Pune, India"],mode:["Office"],urgency:"Low-Medium",product:"Test case authoring, test run management, bug/time tracking integrations, team collaboration. Sister product to Celoxis.",icp:"QA teams and developers at software companies needing structured test management. Alternative to TestRail.",funding:"Bootstrapped. Parent Celoxis: Rs. 38.1Cr ($4.5M) revenue FY2025, profitable.",revenue:"$4.5M (Celoxis parent FY2025)",competitors:["TestRail","Qase","PractiTest","Zephyr","TestCollab"],news:"2025: Ranked top test management tool. Parent Celoxis: 187% EBITDA CAGR.",gtmMotion:"Inside Sales + PLG (Freemium). SDR upsells to paid tiers. Leverages Celoxis customer base.",salesMotion:"Outbound SDR targeting QA managers and VP Engineering. Short cycles (14-30 days). Price competitive vs TestRail.",gaps:["Tuskr less known than TestRail or Qase","Technical buyer prefers self-serve over sales calls","Pune SDR pool smaller than Bengaluru/Mumbai"],outreach:"'Tuskr by Celoxis is top-ranked test management for 2025 — bootstrapped, profitable. ICP: QA managers and Dev leads. Sell simplicity vs TestRail. Celoxis customers are warm cross-sell leads.'",leaders:[{name:"Ravindra Wankar",title:"Co-Founder (Celoxis & Tuskr)",cat:"founder_ceo",li:"https://www.linkedin.com/in/ravindra-wankar-4a506b1"},{name:"Nikhil Daddikar",title:"Co-Owner / Co-Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/nikhildaddikar"},{name:"Mahua Das",title:"Head of Marketing",cat:"other",li:"https://www.linkedin.com/in/mahua-das-37b6448a"}]},
+  {id:16,name:"Appitsimple Infotek",cat:"B2B SaaS / Cloud Telephony",stage:"Scale-up",emp:"51-200",hq:"Ahmedabad, India",founded:null,website:"https://callhippo.com/",linkedin:"https://www.linkedin.com/company/appitsimple-infotek-pvt-ltd",about:"AI-first B2B SaaS behind CallHippo: cloud telephony, AI agents, sales dialers, unified inbox. 5,000+ customers, 173 countries.",roles:["Sales Development Representative"],jobUrls:["https://www.linkedin.com/jobs/view/4448871951/"],loc:["Ahmedabad, India"],mode:["Office"],urgency:"Medium",product:"CallHippo: AI-driven business communication with cloud telephony, AI calling agents, power dialers, unified inbox, 173-country numbers.",icp:"SMB and mid-market sales/support teams globally needing virtual phone and AI call automation. Remote-first companies needing cloud PBX.",funding:"Bootstrapped/Unfunded. Profitable at $21-25M revenue.",revenue:"$25M ARR (Appitsimple); $21.1M ARR (CallHippo)",competitors:["Aircall","CloudTalk","RingCentral","Freshcaller","JustCall","Talkdesk"],news:"2025: Expanded AI agents and sales dialer. 51-200 employees across Ahmedabad and Bengaluru.",gtmMotion:"Inbound-Led + SDR Outbound. G2/Capterra and Google Ads drive inbound; SDR handles IQ and outbound.",salesMotion:"High-velocity inside sales. Short cycles (7-30 days). Demo + free trial → paid. SDR in Ahmedabad selling India and some US.",gaps:["Ahmedabad talent market smaller than Bengaluru/Mumbai","Competing vs Aircall, JustCall needs sharper messaging","AI calling agents feature needs to be central to pitch"],outreach:"'CallHippo is a profitable $25M ARR AI-first comm platform used by 5,000+ companies in 173 countries. Lead with AI agents + power dialer vs Aircall/JustCall. ROI: your AI agent works 24/7 at cost of one SDR.'",leaders:[{name:"Ankit Dudhwewala",title:"CEO & Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/ankitdudhwewala"},{name:"Suhasini Dudhwewala",title:"Co-Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/suhasini-dudhwewala-724729119"},{name:"Gaurang Pujara",title:"Head of Technology",cat:"other",li:"https://www.linkedin.com/in/gaurang-pujara-a0255a282"}]},
+  {id:17,name:"DATOMS",cat:"IoT SaaS / Connected Operations",stage:"Startup",emp:"51-200",hq:"Bengaluru, India",founded:"2015",website:"http://www.datoms.io",linkedin:"https://www.linkedin.com/company/datoms",about:"Industrial IoT platform enabling Equipment-as-a-Service. Connecting machines, digital transformation for OEMs.",roles:["Sales Development Representative"],jobUrls:["https://www.linkedin.com/jobs/view/4448258892/"],loc:["Bhubaneswar, India"],mode:["Office"],urgency:"Low-Medium",product:"Device management, real-time monitoring, analytics, digital transformation layer for industrial equipment. $18B connected machines market.",icp:"Industrial equipment OEMs and system integrators. Construction, agriculture, energy, manufacturing equipment.",funding:"₹25 crore (~$2.76M) Series A. Big Capital JSC, IvyCap, YourNest.",revenue:"Rs. 5.57Cr ($670K) FY2025 (doubled YoY)",competitors:["AssetCues","Fracttal","Infinite Uptime","Proxgy","Algo8"],news:"Raised ₹25Cr Series A. Revenue doubled YoY. Hiring SDR in Bhubaneswar.",gtmMotion:"Enterprise B2B Sales (OEM-focused). SDR targeting OEM business development and digital transformation leads.",salesMotion:"Outbound SDR targeting VP Engineering, VP Digital, CEO at OEMs. Complex (60-180 days). Selling EaaS transformation.",gaps:["Bhubaneswar SDR has limited access to OEM decision-makers in Pune/Chennai/Hyderabad","IoT SaaS is complex to sell","Revenue still small — mostly qualifying and nurturing"],outreach:"'DATOMS is Series A IoT SaaS turning industrial equipment companies into Equipment-as-a-Service businesses. ICP: VP Digital and BD leads at OEMs. Early-stage outbound — you'll build the playbook.'",leaders:[{name:"Amiya Samantaray",title:"Founder & CEO",cat:"founder_ceo",li:"https://www.linkedin.com/in/amiyakumarsamantaray"},{name:"Akanksha Priyadarshini",title:"Co-Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/akankshapriyadarshini"},{name:"Amrit Kumar Biswal",title:"Co-Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/amritmx"},{name:"Asish Sahoo",title:"Co-Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/asishsahoo"}]},
+  {id:18,name:"Darwinbox",cat:"HR Tech / HCM Platform",stage:"Scale-up",emp:"1001-5000",hq:"San Mateo, CA",founded:"2015",website:"https://www.darwinbox.com",linkedin:"https://www.linkedin.com/company/darwinbox",about:"AI-powered HCM for enterprises. Full-suite HRMS. Unicorn backed by Salesforce Ventures. $100M revenue.",roles:["GTM Engineer"],jobUrls:["https://www.linkedin.com/jobs/view/4448837966/"],loc:["Hyderabad, India"],mode:["Office"],urgency:"High",product:"Full-suite HRMS: payroll, attendance, performance, recruitment, onboarding, people analytics, HR voicebot, travel/expense.",icp:"Mid-market to large enterprises (500+ employees) in India, SE Asia, Middle East. IT, BFSI, retail, manufacturing.",funding:"$149M+ across 13 rounds. Salesforce Ventures, Peak XV, Lightspeed, Tiger Global. Unicorn (~$1B).",revenue:"$100M (2025)",competitors:["Workday","SAP SuccessFactors","PeopleStrong","Keka HR","Rippling","Deel"],news:"July 2026: Akshay Murthy VP & Country Head India (ex-Salesforce). April 2025: Sudi Bjornstad Korba SVP North America Sales. Co-CEO model.",gtmMotion:"Enterprise Sales + GTM Engineering. GTM Engineer role = RevOps/automated outbound infrastructure for $100M revenue org.",salesMotion:"GTM Engineer builds automated prospecting, data enrichment, outbound tooling at scale. Supports enterprise CHRO/CIO deals.",gaps:["New India Country Head (July 2026) means GTM strategy in flux","GTM Engineer skill set harder to find in Hyderabad","Rippling/Deel expansion creates new competitive pressure"],outreach:"'Darwinbox is $100M revenue HCM unicorn with new India Country Head (ex-Salesforce, July 2026) hiring GTM Engineer for RevOps + automation. High autonomy — early mover advantage as India GTM rebuilds under new leadership.'",leaders:[{name:"Chaitanya Peddi",title:"Co-CEO & Co-Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/chaitanyapeddi"},{name:"Jayant Paleti",title:"Co-CEO & Co-Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/jayantpaleti"},{name:"Rohit Chennamaneni",title:"Co-Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/rohitchennamaneni"},{name:"Akshay Murthy",title:"VP & Country Head, India",cat:"vp_sales",li:"https://www.linkedin.com/in/akshaygmurthy"},{name:"Sudi Bjornstad Korba",title:"SVP Sales, North America",cat:"vp_sales",li:"https://www.linkedin.com/in/sudibjornstad"}]},
+  {id:19,name:"Signalmash",cat:"CPaaS / Communications Platform",stage:"Startup",emp:"51-200",hq:"Lake Oswego, OR",founded:"2020",website:"https://signalmash.com",linkedin:"https://www.linkedin.com/company/signalmash",about:"Boutique CPaaS with SMS/MMS APIs, Voice APIs, SIP Trunking, Contact Center. Differentiates on hands-on human support.",roles:["GTM Engineer, India"],jobUrls:["https://www.linkedin.com/jobs/view/4447661525/"],loc:["India (Remote)"],mode:["Remote (India)"],urgency:"High",product:"SMS/MMS APIs, Voice APIs, Elastic SIP Trunking, Programmable Voice, Campaign Registry, KYC, Contact Center, Hosted PBX.",icp:"SMBs and mid-market needing reliable programmatic voice/messaging with human support. Businesses frustrated with Twilio.",funding:"Not disclosed (bootstrapped/small). 2020 founding.",revenue:"Not disclosed",competitors:["Twilio","Sinch","Telnyx","Vonage","Bandwidth","Plivo"],news:"2025: Hiring GTM Engineer in India (remote) for outbound motion. Expanding beyond US through India.",gtmMotion:"Outbound Sales + Partner/Channel. GTM Engineer building automated outbound for US CPaaS entering India market.",salesMotion:"GTM Engineer is technical sales/RevOps hybrid — automating lead gen, prospecting, outreach. Founding GTM hire.",gaps:["Tiny team — 51-200 per LinkedIn may be inflated","India CPaaS has local competitors (Kaleyra, Exotel, Tanla)","Boutique positioning doesn't scale in commoditizing market"],outreach:"'Signalmash is building India GTM from scratch — this is essentially the founding GTM hire. Remote, high autonomy, direct access to founders. Architect the India outbound motion for a US CPaaS that differentiates on support vs Twilio's complexity.'",leaders:[{name:"Noah Kamrat",title:"Co-Founder & CEO",cat:"founder_ceo",li:"https://www.linkedin.com/in/noahkamrat"},{name:"Eric Engbers",title:"Co-Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/engbers"}]},
+  {id:20,name:"Qureos",cat:"HR Tech / AI Recruitment",stage:"High Growth Startup",emp:"11-50",hq:"UAE",founded:"2021",website:"https://www.qureos.com/",linkedin:"https://www.linkedin.com/company/qureos",about:"AI recruiting platform automating sourcing, screening, and job matching. Backed by Prosus Ventures. MENA, US, UK, India.",roles:["Inside Sales Representative (US Market)"],jobUrls:["https://www.linkedin.com/jobs/view/4448519525/"],loc:["Bengaluru, India"],mode:["Office"],urgency:"Medium",product:"AI-powered talent discovery, resume analysis, candidate outreach, personalized job matching.",icp:"Recruiters and HR teams at enterprises and staffing firms (MENA, US, UK, India). White-collar hiring at scale.",funding:"$13M total. $5M seed (Feb 2026) led by Prosus Ventures + Salica Oryx Fund.",revenue:"Not publicly disclosed",competitors:["LinkedIn Recruiter","Greenhouse","Lever","Juicebox","Manatal","Workable"],news:"Feb 2026: $5M seed from Prosus Ventures. Expanding US, UK, India markets.",gtmMotion:"Inside Sales + PLG. ISR in Bengaluru targeting US market. AI-powered recruiter for hiring managers.",salesMotion:"Inside Sales Rep selling US accounts from Bengaluru. Demo-driven. Short-medium cycles (14-45 days).",gaps:["US recruiting market competitive — buyers compare to LinkedIn Recruiter, Greenhouse","MENA-origin with limited US brand recognition","India ISR to US faces timezone and cultural differences"],outreach:"'Qureos is Prosus-backed AI recruiting platform expanding US market through India ISR team. Differentiator: AI finds candidates beyond your database — proactive outreach vs passive job posting. Backed by $13M.'",leaders:[{name:"Alexander Epure",title:"CEO & Co-Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/alexanderepure"},{name:"Usama Nini",title:"Co-Founder",cat:"founder_ceo",li:"https://www.linkedin.com/in/usama-nini"}]}
+];
+
+const FREQ_HIRERS = new Set([3, 10]);
+
+const STATUSES = ['new','interested','applied','rejected','parked'];
+const STATUS_LABELS = {new:'New',interested:'Interested',applied:'Applied',rejected:'Rejected',parked:'Parked'};
+
+let filters = {stage:'all',urgency:'all',status:'all',freq:'all'};
+let searchQuery = '';
+
+function getStatus(id) {
+  try { return localStorage.getItem('mi_status_'+id) || 'new'; } catch(e) { return 'new'; }
+}
+function setStatus(id, s) {
+  try { localStorage.setItem('mi_status_'+id, s); } catch(e) {}
+}
+
+function normalizeUrgency(u) {
+  if (!u) return 'Medium';
+  if (u.toLowerCase().includes('high')) return 'High';
+  if (u.toLowerCase().includes('low')) return 'Low';
+  return 'Medium';
+}
+
+function getInitials(name) {
+  return name.split(' ').map(w => w[0]).filter(Boolean).slice(0,2).join('').toUpperCase();
+}
+
+function renderStats() {
+  const visible = getFilteredCompanies();
+  const total = visible.length;
+  const high = visible.filter(c => normalizeUrgency(c.urgency) === 'High').length;
+  const interested = visible.filter(c => getStatus(c.id) === 'interested').length;
+  const applied = visible.filter(c => getStatus(c.id) === 'applied').length;
+  const freq = visible.filter(c => FREQ_HIRERS.has(c.id)).length;
+  const remote = visible.filter(c => c.mode.some(m => m.toLowerCase().includes('remote'))).length;
+
+  document.getElementById('statsRow').innerHTML = `
+    <div class="stat-card"><div class="stat-num">${total}</div><div class="stat-label">Companies</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:var(--red)">${high}</div><div class="stat-label">High Urgency</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:var(--blue)">${interested}</div><div class="stat-label">Interested</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:var(--green)">${applied}</div><div class="stat-label">Applied</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:var(--purple)">${freq}</div><div class="stat-label">Frequent Hirers</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:var(--teal)">${remote}</div><div class="stat-label">Remote</div></div>
+  `;
+}
+
+function getFilteredCompanies() {
+  return COMPANIES.filter(c => {
+    if (filters.stage !== 'all' && c.stage !== filters.stage) return false;
+    const u = normalizeUrgency(c.urgency);
+    if (filters.urgency !== 'all' && u !== filters.urgency) return false;
+    if (filters.status !== 'all' && getStatus(c.id) !== filters.status) return false;
+    if (filters.freq === 'freq' && !FREQ_HIRERS.has(c.id)) return false;
+    if (searchQuery) {
+      const q = searchQuery.toLowerCase();
+      const haystack = [c.name, c.cat, c.about, ...c.roles, ...(c.loc||[]), c.product||'', c.icp||''].join(' ').toLowerCase();
+      if (!haystack.includes(q)) return false;
+    }
+    return true;
+  });
+}
+
+function renderCompanies() {
+  const list = document.getElementById('companyList');
+  const filtered = getFilteredCompanies();
+  if (!filtered.length) {
+    list.innerHTML = '<div class="empty-state">No companies match your filters.</div>';
+    renderStats();
+    return;
+  }
+
+  list.innerHTML = filtered.map(c => {
+    const u = normalizeUrgency(c.urgency);
+    const urgClass = u === 'High' ? 'pill-urgency-high' : u === 'Low' ? 'pill-urgency-low' : 'pill-urgency-medium';
+    const st = getStatus(c.id);
+    const isFreq = FREQ_HIRERS.has(c.id);
+    const isRemote = c.mode.some(m => m.toLowerCase().includes('remote'));
+
+    return `<div class="company-card" data-id="${c.id}">
+      <div class="card-header" onclick="toggleCard(${c.id})">
+        <div class="card-left">
+          <div class="card-name">
+            ${c.name}
+            ${isFreq ? '<span class="pill pill-freq">Frequent Hirer</span>' : ''}
+          </div>
+          <div class="card-category">${c.cat}</div>
+          <div class="card-meta">
+            <span class="pill pill-stage">${c.stage}</span>
+            <span class="pill ${urgClass}">${u} Urgency</span>
+            ${isRemote ? '<span class="pill pill-remote">Remote</span>' : ''}
+            <span class="pill" style="background:var(--border-light);color:var(--text-secondary)">${c.emp} emp</span>
+          </div>
+        </div>
+        <div class="card-right">
+          <div class="status-wrap">
+            <button class="status-btn" data-status="${st}" onclick="event.stopPropagation();toggleStatusMenu(${c.id})">${STATUS_LABELS[st]}</button>
+            <div class="status-menu" id="smenu-${c.id}">
+              ${STATUSES.map(s => `<button onclick="event.stopPropagation();pickStatus(${c.id},'${s}')">${STATUS_LABELS[s]}</button>`).join('')}
+            </div>
+          </div>
+          <svg class="chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="5 8 10 13 15 8"/></svg>
+        </div>
+      </div>
+      <div class="card-detail">
+        <div class="detail-tabs" id="tabs-${c.id}">
+          <button class="active" onclick="switchTab(${c.id},'overview',this)">Overview</button>
+          <button onclick="switchTab(${c.id},'leadership',this)">Leadership</button>
+          <button onclick="switchTab(${c.id},'intel',this)">Intelligence</button>
+          <button onclick="switchTab(${c.id},'gtm',this)">GTM & Outreach</button>
+        </div>
+        <div class="tab-content">
+          <div class="tab-pane active" id="pane-${c.id}-overview">
+            <div class="info-grid">
+              <div class="info-item"><div class="info-label">Headquarters</div><div class="info-value">${c.hq || 'N/A'}</div></div>
+              <div class="info-item"><div class="info-label">Founded</div><div class="info-value">${c.founded || 'N/A'}</div></div>
+              <div class="info-item"><div class="info-label">Employees</div><div class="info-value">${c.emp}</div></div>
+              <div class="info-item"><div class="info-label">Website</div><div class="info-value"><a href="${c.website}" target="_blank" rel="noopener">${c.website.replace(/https?:\/\//,'')}</a></div></div>
+              <div class="info-item"><div class="info-label">LinkedIn</div><div class="info-value"><a href="${c.linkedin}" target="_blank" rel="noopener">Company Profile</a></div></div>
+              <div class="info-item"><div class="info-label">Revenue</div><div class="info-value">${c.revenue || 'Not disclosed'}</div></div>
+            </div>
+            <div style="margin-top:18px">
+              <div class="info-label">About</div>
+              <p style="font-size:15px;line-height:1.5;margin-top:4px">${c.about}</p>
+            </div>
+            <div style="margin-top:16px">
+              <div class="info-label">Open Roles</div>
+              <div class="roles-list">
+                ${c.roles.map((r,i) => `<div class="role-card"><span>${r}</span>${c.jobUrls[i] ? `<a class="role-link" href="${c.jobUrls[i]}" target="_blank" rel="noopener">View Job</a>` : ''}</div>`).join('')}
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="pane-${c.id}-leadership">
+            <div class="leader-list">
+              ${c.leaders.map(l => `<div class="leader-row">
+                <div class="leader-avatar" style="background:${l.cat==='founder_ceo'?'var(--blue)':l.cat==='vp_sales'?'var(--green)':l.cat==='head_sales'?'var(--orange)':'var(--purple)'}">${getInitials(l.name)}</div>
+                <div class="leader-info">
+                  <div class="leader-name">${l.name}</div>
+                  <div class="leader-title">${l.title}</div>
+                </div>
+                ${l.li ? `<a class="leader-link" href="${l.li}" target="_blank" rel="noopener">LinkedIn</a>` : '<span class="leader-link disabled">No Profile</span>'}
+              </div>`).join('')}
+            </div>
+          </div>
+          <div class="tab-pane" id="pane-${c.id}-intel">
+            <div class="section-block"><h4>Product</h4><p>${c.product}</p></div>
+            <div class="section-block"><h4>Ideal Customer Profile</h4><p>${c.icp}</p></div>
+            <div class="section-block"><h4>Funding</h4><p>${c.funding}</p></div>
+            <div class="section-block"><h4>Recent News</h4><p>${c.news}</p></div>
+            <div class="section-block"><h4>Competitors</h4><div class="competitor-tags">${c.competitors.map(x=>`<span class="comp-tag">${x}</span>`).join('')}</div></div>
+          </div>
+          <div class="tab-pane" id="pane-${c.id}-gtm">
+            <div class="section-block"><h4>GTM Motion</h4><p>${c.gtmMotion}</p></div>
+            <div class="section-block"><h4>Sales Motion</h4><p>${c.salesMotion}</p></div>
+            <div class="section-block"><h4>Observable GTM Gaps</h4>${c.gaps.map(g=>`<div class="gap-item">${g}</div>`).join('')}</div>
+            <div class="section-block"><h4>Outreach Angle</h4><div class="outreach-box">${c.outreach}</div></div>
+          </div>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+  renderStats();
+}
+
+function toggleCard(id) {
+  const card = document.querySelector(`.company-card[data-id="${id}"]`);
+  card.classList.toggle('open');
+}
+
+function switchTab(id, tab, btn) {
+  const tabs = document.getElementById('tabs-'+id);
+  tabs.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const content = tabs.parentElement.nextElementSibling || tabs.closest('.card-detail').querySelector('.tab-content');
+  content.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+  document.getElementById('pane-'+id+'-'+tab).classList.add('active');
+}
+
+function toggleStatusMenu(id) {
+  document.querySelectorAll('.status-menu.show').forEach(m => { if (m.id !== 'smenu-'+id) m.classList.remove('show'); });
+  document.getElementById('smenu-'+id).classList.toggle('show');
+}
+
+function pickStatus(id, status) {
+  setStatus(id, status);
+  document.getElementById('smenu-'+id).classList.remove('show');
+  renderCompanies();
+}
+
+document.addEventListener('click', () => {
+  document.querySelectorAll('.status-menu.show').forEach(m => m.classList.remove('show'));
+});
+
+document.getElementById('searchInput').addEventListener('input', function() {
+  searchQuery = this.value.trim();
+  renderCompanies();
+});
+
+document.querySelectorAll('.seg-control').forEach(ctrl => {
+  const filterKey = ctrl.dataset.filter;
+  ctrl.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      ctrl.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filters[filterKey] = btn.dataset.val;
+      renderCompanies();
+    });
+  });
+});
+
+renderCompanies();
+</script>
